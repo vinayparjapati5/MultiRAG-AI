@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
-//import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import LandingPage from "./landing_page";
+import Login from "./pages/user/login";
+import SignUp from "./pages/user/register";
 import "./App.css";
 import "./index.css"
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Profile from "./pages/user/profile";
+import { useState } from "react";
+import { auth } from "./pages/user/firebase";
+//import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
-
-import Login from "./pages/user/login";
-import SignUp from "./pages/user/register";
-
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Profile from "./pages/user/profile";
-import { useState } from "react";
-import { auth } from "./pages/user/firebase";
 
 function App() {
   const [user, setUser] = useState();
@@ -32,9 +32,10 @@ function App() {
           <div className="auth-inner">
             <Routes>
               <Route
-                path="/"
+                path="/profile"
                 element={user ? <Navigate to="/profile" /> : <Login />}
               />
+              <Route path="/" element={<LandingPage/>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<SignUp />} />
               <Route path="/profile" element={<Profile />} />

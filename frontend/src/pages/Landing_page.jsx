@@ -4,7 +4,6 @@ import "./LandingPage.css";
 
 export default function LandingPage() {
   const [selectedRole, setSelectedRole] = useState(null);
-
   return (
     <div className="container">
       {!selectedRole ? (

@@ -9,14 +9,14 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import Login from "./pages/login";
-import SignUp from "./pages/register";
+import Login from "./pages/user/login";
+import SignUp from "./pages/user/register";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Profile from "./pages/profile";
+import Profile from "./pages/user/profile";
 import { useState } from "react";
-import { auth } from "./pages/firebase";
+import { auth } from "./pages/user/firebase";
 
 function App() {
   const [user, setUser] = useState();

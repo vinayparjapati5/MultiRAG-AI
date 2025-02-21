@@ -1,0 +1,44 @@
+/* Admin.css */
+
+/* ... (rest of the CSS from the previous response) ... */
+
+.card:nth-child(1) { /* First card (Upload) */
+    background-color: #e9f0f8; /* Light blue */
+    border: 1px solid #c8dceb; /* Subtle border */
+}
+
+.card:nth-child(2) { /* Second card (Preview) */
+    background-color: #f8f0e9; /* Light beige/peach */
+    border: 1px solid #dcd2c8; /* Subtle border */
+}
+
+.card:nth-child(3) { /* Third card (Settings) */
+    background-color: #f0e9f8; /* Light lavender */
+    border: 1px solid #d2c8dc; /* Subtle border */
+}
+
+.card h1 {
+    color: #333; /* Darker heading color */
+}
+
+.card p {
+    color: #555; /* Slightly darker paragraph color */
+}
+
+.card button {
+    background-color: #007bff; /* Blue button */
+}
+
+.card button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Optional: Add a subtle hover effect to the entire card */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover */
+}

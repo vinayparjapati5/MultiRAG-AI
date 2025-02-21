@@ -1,0 +1,98 @@
+/* Admin.css */
+html,body{
+    width:100%;
+    height:100%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+
+.main-container {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    flex-direction: column; /* Align header and cards vertically */
+    align-items: center;
+    min-height: 100vh; /* Cover the entire viewport */
+    padding: 20px;
+}
+
+.main-heading {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 350px; /* Adjust card width as needed */
+    height: 280px; /* Adjust card height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
